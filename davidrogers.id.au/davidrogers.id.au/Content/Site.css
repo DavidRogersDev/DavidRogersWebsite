@@ -1,0 +1,220 @@
+﻿@font-face {
+  font-family: 'Comfortaac';
+  src: url('../fonts/comfortaac.woff');  
+}
+
+body {
+    background-image: url(Images/dar_wallpaper.png);
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Domine', serif;
+    text-shadow: 1px 2px 2px rgba(110, 110, 110, 1);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.jumbotronBackGrnd h1 {
+    font-family: 'Comfortaa', cursive;
+}
+
+.jumbotronBackGrnd {
+    background: rgb(36, 40, 38);
+    background: -moz-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
+    background: -o-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
+    background: -ms-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
+    background: linear-gradient(180deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);    
+    color: #eee;
+    margin-top: 10px;
+}
+
+.jumbotronBackGrnd h1 {
+    text-shadow:  2px 2px 2px rgba(110, 110, 110, 1);
+}
+
+.myShadow {
+    text-shadow: 3px 2px 2px rgba(110, 110, 110, 1);
+}
+
+.noShadow {
+    text-shadow: none; 
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+a.noShadow {
+    color: #333333;
+}
+
+a.noShadow:hover {
+    text-decoration: none;
+}
+
+.noShadow:hover {
+    color: #3d7a3d;
+}
+
+.navLinks {
+    margin-top: 30px;
+    font-size: 3em;
+}
+
+nav i, ul.nav li a {
+    cursor: pointer;
+}
+
+nav i {
+    margin: 0px 30px;
+}
+
+.frameContent {
+    background-color: rgba(238, 238, 238, 0.65);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.viewContent {
+    min-height: 400px;
+    padding: 0px 15px;
+}
+
+.viewContent a {
+    color: #3d7a3d;
+}
+
+.viewContent i {
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.slideshow {
+    opacity: 1
+}
+
+img.pictureBoxForLogo {
+    border: 2px #C0C0C0 solid; 
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;    
+    border-radius: 15px;
+}
+
+.contacts {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.viewContent p i span {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.smallIcons {
+    font-size: 14px;
+}
+
+.socialnull {
+    cursor: url(/Content/Images/glyphicons_290_skull.png), auto;
+}
+
+#email i {
+    color: #333333;
+}
+
+.view-animate-container {
+    position:relative;
+    min-height:400px!important;
+    position:relative;
+    background:transparent;
+    padding: 0px;
+    overflow:hidden;
+}
+ 
+ 
+.view-animate.ng-enter, .view-animate.ng-leave {
+   opacity: 0;
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+       -moz-animation: fadein 1s; /* Firefox */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera */
+            animation: fadein 1s;
+ 
+  display:block;
+  width:100%;
+
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:0px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+ 
+.view-animate.ng-enter {
+  left:100%;
+}
+.view-animate.ng-enter.ng-enter-active {
+  left:0;
+}
+.view-animate.ng-leave.ng-leave-active {
+  left:-100%;
+}

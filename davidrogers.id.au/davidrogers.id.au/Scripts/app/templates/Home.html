@@ -1,0 +1,39 @@
+﻿    <div class="col-md-12">        
+        <h1>{{mainTitle}}</h1>
+    </div>
+    <div class="col-md-7">        
+        
+        
+        <p>Hi, I’m dave.
+
+        <p>I am a .NET developer based in Adelaide, South Australia, Australia.
+
+        <p>I have been writing code since my humble beginnings of teaching myself HTML way back in 1997.
+
+        <p>Developers have to keep up-to-date in this fast moving space and I value self-training highly. To that end, I invest in myself every year through both the purchase of text books and online training courses. I also take the time to view videos from presentations given at various conferences around the world.
+
+        <p>I have experience in both rich-client and web development, including the technologies cycling in the image fader to the right. I try to write as much code as I can in my own time and have included some of the code on my Github page which is viewable by the link below.
+
+        <p>I am also the project coordinator and sole developer of <a ng-href="{{winformsmvpUrl}}">WinformsMVP</a>. You can click on the <strong>projects</strong> link below for more information on that framework.
+
+
+    </div>
+    <div class="col-md-5">
+        <div class="slideshow">
+            <img src="/Content/Images/Angularjs.png" width="400" height="150" class="pictureBoxForLogo"/>
+            <img src="/Content/Images/bootstrap.png" width="400" height="150" class="pictureBoxForLogo"/>
+            <img src="/Content/Images/jquery.png" width="400" height="150" class="pictureBoxForLogo"/>
+            <img src="/Content/Images/jquery-ui.png" width="400" height="150" class="pictureBoxForLogo"/>
+            <img src="/Content/Images/aspnetmvc.png" width="400" height="150" class="pictureBoxForLogo"/>
+        </div>
+    </div>
+<script>
+    $(function () {
+        $('.slideshow').cycle({
+            fx: 'fade',
+            pause: 0.1,
+            speed: 2000,
+            timeout: 500
+        });
+    });
+</script>

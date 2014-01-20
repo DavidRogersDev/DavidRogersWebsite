@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html ng-app="darApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <base href="/"></base>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body ng-controller="MainController">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("davidrogers", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.AngularLink("LinkHome", "Home", new KeyValuePair<string, string>("ng-click", "backHome()"))</li>
+                    <li>@Html.AngularLink("LinkContact", "Contact", new KeyValuePair<string, string>("ng-click","goToContact()"))</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content frameContent">
+        
+
+        @RenderBody()
+                
+        <hr />
+        <footer>
+            <nav class="navLinks myShadow">
+                <i class="fa fa-home" ng-click="backHome()"><span class="noShadow">&nbsp;home</span></i>
+                <i class="fa fa-github" ng-click="goToGithub()"><span class="noShadow">&nbsp;source</span></i>
+                <i class="fa fa-code" ng-click="goToProjects()"><span class="noShadow">&nbsp;projects</span></i>
+                <i class="fa fa-pencil-square-o" ng-click="goToArticles()"><span class="noShadow">&nbsp;articles</span></i>
+                <i class="fa fa-book" ng-click="goToBlog()"><a ng-href="{{blogUrl}}" class="noShadow">&nbsp;blog</a></i>
+            </nav>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/qAndBreeze")
+    @Scripts.Render("~/bundles/bootstrapPlusToastr")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/appAll")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

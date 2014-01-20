@@ -1,0 +1,23 @@
+﻿    <div class="col-md-12">        
+        <h1>{{gitHubTitle}}</h1>
+        
+        <h3>{{repoTitle}}</h3>
+        
+        <div class="" data-ng-repeat="repo in repos">
+            <p><a href="{{repo.html_url}}">{{repo.name}}</a> - {{repo.description}}</p>
+        </div>
+        
+        <h3>{{gistsTitle}}</h3>
+        
+        <div class="" data-ng-repeat="gist in gists">
+            <p><a href="{{gist.html_url}}">{{getFileName(gist.files)}}</a> - {{gist.description}}</p>
+        </div>
+
+        <hr/>
+        
+        <i class="fa fa-tachometer" ng-click="goGithubDave()"></i> <a ng-href="{{githubSite}}">Go to my GibHub dashboard</a>
+
+    </div>
+    <div class="col-md-4">
+
+    </div>

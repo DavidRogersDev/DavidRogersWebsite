@@ -162,6 +162,13 @@ img.pictureBoxForLogo {
     color: #333333;
 }
 
+#gMapMarker {
+    color: #eeeeee;
+    font-size: 1.5em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 .view-animate-container {
     position:relative;
     min-height:400px!important;

@@ -3,7 +3,7 @@
 
     var serviceId = 'entityManagerFactory';
 
-    var darApp = angular.module('darApp');
+    var darApp = angular.module(clientConstants.appName);
 
     darApp.factory(serviceId, ['config', emFactory]);
 

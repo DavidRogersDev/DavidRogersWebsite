@@ -450,6 +450,7 @@
     <Content Include="Scripts\angular\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zu.js" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\constants.js" />
     <Content Include="Scripts\app\common\common.js" />
     <Content Include="Scripts\app\common\logger.js" />
     <Content Include="Scripts\app\config.js" />

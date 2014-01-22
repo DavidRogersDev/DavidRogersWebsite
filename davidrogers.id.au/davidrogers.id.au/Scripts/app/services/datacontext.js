@@ -2,7 +2,7 @@
     'use strict';
 
     var serviceId = 'datacontext';
-    angular.module('darApp').factory(serviceId, ['$q','config', 'entityManagerFactory', datacontext]);
+    angular.module(clientConstants.appName).factory(serviceId, ['$q', 'config', 'entityManagerFactory', datacontext]);
 
     function datacontext($q, config, entityManagerFactory) {
         var EntityQuery = breeze.EntityQuery;
@@ -23,11 +23,11 @@
         function getRepositories() {
             var orderBy = 'name';
 
-            return $q.when([]);
-            //return EntityQuery.from('repos')
-            //    .orderBy(orderBy)
-            //    .using(manager).execute()
-            //    .to$q(querySucceeded, _queryFailed);
+//            return $q.when([]);
+            return EntityQuery.from('repos')
+                .orderBy(orderBy)
+                .using(manager).execute()
+                .to$q(querySucceeded, _queryFailed);
 
             function querySucceeded(data) {
                 var repositories = data.results;
@@ -37,10 +37,10 @@
         }
 
         function getGists() {
-            return $.when(['hi', 'dave']);
-            //return EntityQuery.from('gists')
-            //    .using(manager).execute()
-            //    .to$q(querySucceeded, _queryFailed);
+            //return $.when(['hi', 'dave']);
+            return EntityQuery.from('gists')
+                .using(manager).execute()
+                .to$q(querySucceeded, _queryFailed);
 
             function querySucceeded(data) {
                 var gists = data.results;

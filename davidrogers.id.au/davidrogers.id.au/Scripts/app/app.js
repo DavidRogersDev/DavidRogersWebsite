@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var darApp = angular.module('darApp', [
+    var darApp = angular.module(clientConstants.appName, [
         // Angular modules 
         'ngRoute',
         'ngAnimate'

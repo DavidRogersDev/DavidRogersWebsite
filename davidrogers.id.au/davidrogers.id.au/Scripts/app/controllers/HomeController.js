@@ -3,11 +3,11 @@
 
     var controllerId = 'HomeController';
     
-    var darApp = angular.module('darApp');
+    var darApp = angular.module(clientConstants.appName);
 
-    darApp.controller(controllerId, ['$q', '$rootScope', '$scope', '$location', 'config', 'datacontext', 'entityManagerFactory', 'logger', homeController]);
+    darApp.controller(controllerId, ['$q', '$rootScope', '$scope', '$location', 'config', 'entityManagerFactory', 'logger', homeController]);
 
-    function homeController($q, $rootScope, $scope, $location, config, datacontext, entityManagerFactory, logger) {
+    function homeController($q, $rootScope, $scope, $location, config, entityManagerFactory, logger) {
 
         var log = logger.getLogFn(controllerId);
 

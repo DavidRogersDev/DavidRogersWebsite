@@ -17,6 +17,7 @@
         $scope.blogUrl = 'http://davidrogers.id.au/wp';
         $scope.angularjsUrl = 'http://angularjs.org/';
         $scope.winformsmvpUrl = 'https://winformsmvp.codeplex.com/';
+        $scope.localStorageIsSupported = checkLocalStorage();
 
         $scope.goToProjects = function () {
             $location.replace();
@@ -54,25 +55,43 @@
                 
                 $rootScope.repos = data;
 
-                cacheDataFromGitHub('repos', data);
+                if ($scope.localStorageIsSupported) {
+                    cacheDataFromGitHub('repos', data);
+                }
 
             }), datacontext.getGists().then(function(data) {
                 $rootScope.gists = data;
-                
-                cacheDataFromGitHub('gists', data);
-                
+
+                if ($scope.localStorageIsSupported) {
+                    cacheDataFromGitHub('gists', data);
+                }
+
             })]).then(function (data) {
                 log('All Github info for Dave Retrieved', true);
             }, function (error) {
 
-                logWarning('GitHub service not available. Attempting to load from local storage', true);
+                if ($scope.localStorageIsSupported) {
 
-                $rootScope.gists = JSON.parse(localStorage.getItem("gists"));
-                $rootScope.repos = JSON.parse(localStorage.getItem("repos"));
+                    $rootScope.gists = JSON.parse(localStorage.getItem("gists"));
+                    $rootScope.repos = JSON.parse(localStorage.getItem("repos"));
 
-                $timeout(logSuccess('GitHub data successfully loaded from local storage', true), 20000);
+                    logSuccess('GitHub data successfully loaded from local storage', true);
+                    
+                } else {
+                    $.ajax({
+                        url: '/Api/DarData',
+                        dataType: 'json',
+                        type: 'GET',
+                        contentType: 'application/json; charset=utf-8'
+                    }).done(function (data) {
+                        
+                        $rootScope.gists = data[0];
+                        $rootScope.repos = data[1];
+                        
+                        logSuccess('Cached GitHub data was successfully loaded from a service', true);
 
-
+                    });
+                }
             });
         }
         
@@ -85,6 +104,15 @@
         if (localStorage.getItem(type) === null) {
             localStorage.setItem(type, JSON.stringify(data));
         }
+    }
+
+    function checkLocalStorage() {
+        
+        if (Modernizr.localstorage) {
+            return true;
+        }
+        
+        return false;
     }
     
 })();

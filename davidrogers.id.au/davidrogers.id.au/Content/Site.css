@@ -1,9 +1,4 @@
-﻿@font-face {
-  font-family: 'Comfortaac';
-  src: url('../fonts/comfortaac.woff');  
-}
-
-body {
+﻿body {
     background-image: url(Images/dar_wallpaper.png);
     padding-top: 50px;
     padding-bottom: 20px;
@@ -11,6 +6,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Domine', serif;
+    text-shadow: 1px 2px 2px #6e6e6e;
     text-shadow: 1px 2px 2px rgba(110, 110, 110, 1);
 }
 
@@ -58,20 +54,22 @@ input[type="checkbox"].input-validation-error {
 
 .jumbotronBackGrnd {
     background: rgb(36, 40, 38);
-    background: -moz-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
-    background: -webkit-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
-    background: -o-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
-    background: -ms-linear-gradient(90deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);
-    background: linear-gradient(180deg, rgb(36, 40, 38) 0%, rgb(100, 95, 95) 100%);    
+    background: -moz-linear-gradient(90deg, rgb(36, 40, 38) 0, rgb(100, 95, 95) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(36, 40, 38) 0, rgb(100, 95, 95) 100%);
+    background: -o-linear-gradient(90deg, rgb(36, 40, 38) 0, rgb(100, 95, 95) 100%);
+    background: -ms-linear-gradient(90deg, rgb(36, 40, 38) 0, rgb(100, 95, 95) 100%);
+    background: linear-gradient(180deg, rgb(36, 40, 38) 0, rgb(100, 95, 95) 100%);    
     color: #eee;
     margin-top: 10px;
 }
 
 .jumbotronBackGrnd h1 {
+    text-shadow:  2px 2px 2px #6e6e6e;
     text-shadow:  2px 2px 2px rgba(110, 110, 110, 1);
 }
 
 .myShadow {
+    text-shadow: 3px 2px 2px #6e6e6e;
     text-shadow: 3px 2px 2px rgba(110, 110, 110, 1);
 }
 
@@ -105,19 +103,20 @@ nav i, ul.nav li a {
 }
 
 nav i {
-    margin: 0px 30px;
+    margin: 0 30px;
 }
 
 .frameContent {
+    background-color: #eeeeee;
     background-color: rgba(238, 238, 238, 0.65);
- x    border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
+    border-radius: 15px;
 }
 
 .viewContent {
     min-height: 400px;
-    padding: 0px 15px;
+    padding: 0 15px;
 }
 
 .viewContent a {
@@ -146,8 +145,8 @@ img.pictureBoxForLogo {
 
 .viewContent p i span {
     font-size: 14px;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .smallIcons {
@@ -174,7 +173,7 @@ img.pictureBoxForLogo {
     min-height:400px!important;
     position:relative;
     background:transparent;
-    padding: 0px;
+    padding: 0;
     overflow:hidden;
 }
  
@@ -183,20 +182,17 @@ img.pictureBoxForLogo {
    opacity: 0;
     -webkit-animation: fadein 1s; /* Safari and Chrome */
        -moz-animation: fadein 1s; /* Firefox */
-        -ms-animation: fadein 1s; /* Internet Explorer */
          -o-animation: fadein 1s; /* Opera */
             animation: fadein 1s;
  
   display:block;
   width:100%;
-
-
   position:absolute;
   top:0;
   left:0;
   right:0;
   bottom:0;
-  padding:0px;
+  padding:0;
 }
 
 @keyframes fadein {

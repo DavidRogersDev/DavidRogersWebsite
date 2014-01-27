@@ -460,7 +460,7 @@
     <Content Include="Scripts\app\controllers\ContactController.js" />
     <Content Include="Scripts\app\controllers\GitHubController.js" />
     <Content Include="Scripts\app\controllers\HomeController.js" />
-    <Content Include="Scripts\app\controllers\mainController.js" />
+    <Content Include="Scripts\app\controllers\MainController.js" />
     <Content Include="Scripts\app\controllers\ProjectsController.js" />
     <Content Include="Scripts\app\entityManagerFactory.js" />
     <Content Include="Scripts\app\services\datacontext.js" />

@@ -14,7 +14,7 @@
         var logSuccess = logger.getLogFn(controllerId, 'success');
 
         $scope.mainTitle = 'Home';
-        $scope.blogUrl = 'http://davidrogers.id.au/wp';
+        $scope.blogUrl = 'http://bit.ly/darblog';
         $scope.angularjsUrl = 'http://angularjs.org/';
         $scope.winformsmvpUrl = 'https://winformsmvp.codeplex.com/';
         $scope.localStorageIsSupported = checkLocalStorage();
@@ -67,7 +67,7 @@
                 }
 
             })]).then(function (data) {
-                log('All Github info for Dave Retrieved', true);
+                logSuccess('All Github info for Dave Retrieved', true);
             }, function (error) {
 
                 if ($scope.localStorageIsSupported) {

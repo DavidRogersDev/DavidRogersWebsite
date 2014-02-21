@@ -162,6 +162,7 @@
     <Content Include="Content\Images\old\jquery.png" />
     <Content Include="Content\Images\old\mvc.gif" />
     <Content Include="Content\Images\old\wallpaper_2_1920x1080.jpg" />
+    <Content Include="Content\Images\underscore.png" />
     <Content Include="Content\Images\WinFormsMVPLogo.png" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />

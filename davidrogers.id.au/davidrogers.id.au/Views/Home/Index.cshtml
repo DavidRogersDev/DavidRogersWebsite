@@ -1,4 +1,13 @@
-﻿<div class="jumbotron jumbotronBackGrnd">
+﻿@section meta {
+    <meta name="description" content="Website of .NET developer David Rogers." />
+    <meta name="keywords" content="David Rogers, DavidRogersDev, .NET Developer" />
+    <meta property="og:title" content="davidrogers.id.au" />
+    <meta property="og:description" content="Website of .NET developer David Rogers." />
+    <meta property="og:url" content="@Url.Action("Index", "Home", null, Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <link rel="canonical" href="@Url.Action("Index", "Home", null, Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+}
+
+<div class="jumbotron jumbotronBackGrnd">
     <h1>davidrogers.id.au</h1>
     <p class="lead">Developer, Dog Owner, Human.
     <h6>This SPA was built using Angularjs <a ng-href="{{angularjsUrl}}"><img src="@Url.Content("~/Content/Images/AngularJS-small.png")" /></a></h6>

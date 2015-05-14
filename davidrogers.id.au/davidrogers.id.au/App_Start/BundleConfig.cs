@@ -13,7 +13,7 @@ namespace davidrogers.id.au
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/Scripts/jquery-{version}.js",
-                "~/Scripts/jquery.cycle.all.js",
+                "~/Scripts/cycle/jquery.cycle2.js",
                 "~/Scripts/app/constants.js"
                 ));
 

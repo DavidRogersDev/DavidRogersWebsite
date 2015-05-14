@@ -140,11 +140,6 @@ img.pictureBoxForLogo {
     border-radius: 15px;
 }
 
-img.pictureBoxForLogoDimens {
-     width: 400px;
-    height: 150px;   
-}
-
 .contacts {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -228,23 +223,11 @@ img.pictureBoxForLogoDimens {
   left:-100%;
 }
 
-@media screen and (max-width: 500px) {
-    .jumbotron {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    .container .jumbotron {
-        padding-right: 40px;
-        padding-left: 25px;
-    }
+@media screen and (max-width: 400px) {
+
     .jumbotron h1,
     .jumbotron .h1 {
         font-size: 30px;
-    }
-
-    img.pictureBoxForLogoDimens {
-        width: 200px;
-        height: 75px;    
     }
 }
 

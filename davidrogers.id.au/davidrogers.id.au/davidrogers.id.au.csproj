@@ -155,10 +155,13 @@
     <Content Include="Content\Images\AngularJS-small.png" />
     <Content Include="Content\Images\angularjs.png" />
     <Content Include="Content\Images\aspnetmvc.png" />
+    <Content Include="Content\Images\azure.png" />
     <Content Include="Content\Images\bootstrap.PNG" />
     <Content Include="Content\Images\dar_wallpaper.png" />
     <Content Include="Content\Images\dot.cur" />
+    <Content Include="Content\Images\git.png" />
     <Content Include="Content\Images\glyphicons_290_skull.png" />
+    <Content Include="Content\Images\html5css3.png" />
     <Content Include="Content\Images\jquery-ui.png" />
     <Content Include="Content\Images\jquery.png" />
     <Content Include="Content\Images\underscore.png" />

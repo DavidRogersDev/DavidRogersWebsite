@@ -133,6 +133,10 @@ nav i {
     opacity: 1
 }
 
+img.whiteBack {
+    background-color: #fffafa;
+}
+
 img.pictureBoxForLogo {
     border: 2px #C0C0C0 solid; 
     -webkit-border-radius: 15px;
